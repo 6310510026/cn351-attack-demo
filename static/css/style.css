@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 40px;
+    color:#744ca6
+}
+
+h4 {
+    font-size: 30px;
+    color:#744ca6
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+.btn-purple {
+    background-color: #744ca6;
+    color: #fff;
+}
+
+.btn-purple:hover {
+    background-color: #5f3a7a;
+}
+
+.table thead th,tr,td  {
+    color: white;
+    background-color:  #744ca6;
+}
+
+button {
+    margin-left: 1rem;
+}
+
+.text-1 {
+    color: #744ca6;
+}
+
+.text-2 {
+    color:#52a162
+}
+
+/* login */
+.container.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    position: absolute;
+    margin: auto;
+    padding: 4rem;
+}
+
+.app-title {
+    display: flex;
+    margin: auto;
+}
+
+.wrapper.login {
+    display: flex;
+    margin: auto;
+}
+
+.wrapper button {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+.view {
+    margin-top: 4rem;
+    color: white;
+    
+}
+
+.container.create {
+    margin-top: 4rem;
+    border-radius: 20px;
+    color: white;
+    background-color: #744ca6;
+    padding: 4em;
+}
+
+.container.update {
+    margin-top: 4rem;
+    border-radius: 20px;
+    color: white;
+    background-color: #744ca6;
+    padding: 4em;
+}
+
+form {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.contact-details {
+    width: 400px;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #744ca6;
+
+}
+
+.contact-details p {
+    margin-left: 1rem;
+    color: white;
+}
+
+.custom-bg-primary {
+    background-color: #744ca6;
+}
+
+.custom-text-white {
+    color: white;
+}
