@@ -138,3 +138,21 @@ form {
 .custom-text-white {
     color: white;
 }
+
+.table spaced-table{
+    border-collapse: separate;
+    border-spacing: 10px 0;
+}
+
+table.spaced-table th, table.spaced-table td {
+    padding: 8px;
+    border: 2px solid #ddd;
+    text-align: left;
+}
+
+
+table.spaced-table th {
+    background-color: #744ca6;
+    color: #ffffff;
+    font-weight: bold;
+}
