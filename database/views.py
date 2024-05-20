@@ -56,16 +56,16 @@ def view_contact(request, id):
 @login_required
 def update_contact(request, id):
     contact = Contact.objects.get(id=id)
-    if contact.added_by != request.user & request.user.is_superuser == False:
-        raise PermissionDenied
+    #if contact.added_by != request.user and not request.user.is_superuser:
+    #    raise PermissionDenied
+    #else:
+    if request.method == "POST":
+        form = ContactForm(instance=contact, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
     else:
-        if request.method == "POST":
-            form = ContactForm(instance=contact, data=request.POST)
-            if form.is_valid():
-                form.save()
-                return redirect('index')
-        else:
-            form = ContactForm(instance=contact)
+        form = ContactForm(instance=contact)
 
     data = {'form': form}
     return render(request, 'update_contact.html', data)
@@ -73,11 +73,11 @@ def update_contact(request, id):
 @login_required
 def delete_contact(request, id):
     contact = Contact.objects.get(id=id)
-    if contact.added_by != request.user:
-        raise PermissionDenied
-    else:
-        contact.delete()
-        return redirect('index')
+    #if contact.added_by != request.user and not request.user.is_superuser:
+    #    raise PermissionDenied
+    #else:
+    contact.delete()
+    return redirect('index')
 
 @login_required
 def members(request):
@@ -90,6 +90,7 @@ def products_view(request):
         product_name = request.GET['product_name']
         with connection.cursor() as cursor:
             cursor.execute(f"SELECT * FROM database_product WHERE name = '{product_name}'")
+            # cursor.execute("SELECT * FROM database_product WHERE name = %s", [product_name])
             rows = cursor.fetchall()
         
         if rows:
