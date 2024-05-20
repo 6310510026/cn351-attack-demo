@@ -5,15 +5,15 @@
 <div class="container view">
     <div class="header view">
         <h3>Product Finder</h3>
-        <form method="get" action="{% url 'products' %}">
-            <label for="product_name">Product Name:</label>
+        <form method="get" action="{% url 'products' %}" style="margin: 2rem;">
+            <label for="product_name" style="color:#744ca6">Product Name:</label>
             <input type="text" id="product_name" name="product_name">
             <button type="submit">Search</button>
         </form>
 
         {% if products %}
-        <h2>Result:</h2>
-        <table>
+        <h4>Result</h4>
+        <table class="spaced table">
             <tr>
                 <th>Product Name</th>
                 <th>Description</th>
@@ -25,9 +25,9 @@
             </tr>
             {% endfor %}
         </table>
-    {% elif result %}
-        <p>{{ result }}</p>
-    {% endif %}
+        {% elif result %}
+            <h4 style="font-size: 20px">{{ result }}</h4>
+        {% endif %}
     </div>
     <br>
     
